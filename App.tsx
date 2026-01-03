@@ -17,7 +17,7 @@ const App: React.FC = () => {
   if (!isLoaded) return null;
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-tr from-[#fff5f5] via-[#ffffff] to-[#f0f7ff]">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-tr from-[#fff1eb] via-[#fdf2f8] to-[#f5f3ff]">
       <FloatingElements />
       
       <main className="relative z-10 max-w-2xl mx-auto px-6 py-12 md:py-24 space-y-12 md:space-y-20">

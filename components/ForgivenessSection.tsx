@@ -16,12 +16,14 @@ const ForgivenessSection: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
           >
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setForgiven(true)}
-              className="px-8 py-4 bg-slate-800 text-white rounded-2xl font-semibold text-lg hover:bg-slate-900 transition-all hover:shadow-xl active:scale-95"
+              className="px-10 py-5 bg-slate-800 text-white rounded-2xl font-semibold text-lg transition-colors hover:bg-slate-900"
             >
               Forgive your big brother? 😊
-            </button>
+            </motion.button>
           </motion.div>
         ) : (
           <motion.div
@@ -34,7 +36,7 @@ const ForgivenessSection: React.FC = () => {
               <Heart size={48} className="text-pink-400 animate-bounce" fill="currentColor" />
             </div>
             <h3 className="text-3xl font-dancing text-slate-800">You're the best, Basma!</h3>
-            <p className="text-slate-500">Apology accepted. Peace restored! 🕊️</p>
+            <p className="text-slate-500 font-medium">Apology accepted. Peace restored! 🕊️</p>
           </motion.div>
         )}
       </AnimatePresence>
