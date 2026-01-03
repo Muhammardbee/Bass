@@ -1,0 +1,48 @@
+
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Hero from './components/Hero';
+import ApologyMessage from './components/ApologyMessage';
+import ForgivenessSection from './components/ForgivenessSection';
+import Footer from './components/Footer';
+import FloatingElements from './components/FloatingElements';
+
+const App: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  if (!isLoaded) return null;
+
+  return (
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-tr from-[#fff5f5] via-[#ffffff] to-[#f0f7ff]">
+      <FloatingElements />
+      
+      <main className="relative z-10 max-w-2xl mx-auto px-6 py-12 md:py-24 space-y-12 md:space-y-20">
+        <Hero />
+        
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <ApologyMessage />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <ForgivenessSection />
+        </motion.div>
+
+        <Footer />
+      </main>
+    </div>
+  );
+};
+
+export default App;
