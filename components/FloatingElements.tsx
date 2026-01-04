@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Heart, Star, Sparkles, Flower, Feather, Moon, Cloud, Leaf, Wind } from 'lucide-react';
+import { Heart, Star, Sparkles, Flower, Feather, Moon, Cloud, Leaf, Wind, Sun } from 'lucide-react';
 
 const FloatingElements: React.FC = () => {
   const elements = [
@@ -23,6 +23,11 @@ const FloatingElements: React.FC = () => {
     { Icon: Leaf, color: 'text-emerald-100', size: 22, top: '30%', left: '50%', delay: 'delay-1' },
     { Icon: Wind, color: 'text-sky-100', size: 24, top: '50%', left: '95%', delay: 'delay-2' },
     { Icon: Leaf, color: 'text-orange-50', size: 18, top: '85%', left: '20%', delay: 'delay-3' },
+    { Icon: Sun, color: 'text-rose-50', size: 30, top: '25%', left: '75%', delay: 'delay-2' },
+    // New varied elements
+    { Icon: Star, color: 'text-teal-100', size: 22, top: '45%', left: '40%', delay: 'delay-1' },
+    { Icon: Sparkles, color: 'text-yellow-100', size: 24, top: '15%', left: '20%', delay: 'delay-2' },
+    { Icon: Moon, color: 'text-purple-100', size: 20, top: '70%', left: '55%', delay: 'delay-3' },
   ];
 
   return (
