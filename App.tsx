@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import Hero from './components/Hero';
 import ApologyMessage from './components/ApologyMessage';
@@ -8,21 +7,13 @@ import Footer from './components/Footer';
 import FloatingElements from './components/FloatingElements';
 
 const App: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  if (!isLoaded) return null;
-
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-tr from-[#fff1eb] via-[#fdf2f8] to-[#f5f3ff]">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-tr from-[#fff1eb] via-[#fdf2f8] to-[#f5f3ff] bg-animate-gradient">
       <FloatingElements />
-      
+
       <main className="relative z-10 max-w-2xl mx-auto px-6 py-12 md:py-24 space-y-12 md:space-y-20">
         <Hero />
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

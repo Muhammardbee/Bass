@@ -27,6 +27,17 @@
         .animate-float {
             animation: float 8s ease-in-out infinite;
         }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .bg-animate-gradient {
+            background-size: 200% 200%;
+            animation: gradientFlow 15s ease-in-out infinite;
+        }
+
         .delay-1 { animation-delay: 1s; }
         .delay-2 { animation-delay: 2s; }
         .delay-3 { animation-delay: 3s; }
